@@ -1,0 +1,23 @@
+<p>PeliculasFE app is running!</p>
+
+<div>
+  {{title}}
+</div>
+
+<div>la suma de 2 y 2 es {{2 + 2}}</div>
+
+<div>El doble de 3 es {{duplicarNumero(3)}}</div>
+
+<h2>Datos de la películas</h2>
+
+<div *ngFor="let pelicula of peliculas; let index = index" class="pelicula-contenedor">
+  <div>
+    Película {{index}}: {{pelicula.titulo | uppercase}}
+  </div>
+  <div>
+    {{pelicula.fechaLanzamiento | date:"dd-MMMM-yyyy" | lowercase}}
+  </div>
+  <div>
+    {{pelicula.precio | currency}}
+  </div>
+</div>
